@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\unrealeditor\\inc\\combatframework\\uht\\combatframework.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\x64\\combatframeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\combatframework\\definitions.combatframework.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

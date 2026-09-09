@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\unrealeditor\\inc\\combatframework\\uht\\combatframeworkgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\x64\\combatframeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\combatframework\\definitions.combatframework.h",
+            "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\source\\combatframework\\combatframeworkgamemode.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\githubunrealengineprojects\\aaa-combat-framework\\combatframework\\intermediate\\build\\win64\\unrealeditor\\inc\\combatframework\\uht\\combatframeworkgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\GitHubUnrealEngineProjects\\AAA-Combat-Framework\\CombatFramework\\Source\\CombatFramework\\CombatFramework.Build.cs",
+		"C:\\GitHubUnrealEngineProjects\\AAA-Combat-Framework\\CombatFramework\\Source\\CombatFramework.Target.cs",
+		"C:\\GitHubUnrealEngineProjects\\AAA-Combat-Framework\\CombatFramework\\Source\\CombatFrameworkEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}
