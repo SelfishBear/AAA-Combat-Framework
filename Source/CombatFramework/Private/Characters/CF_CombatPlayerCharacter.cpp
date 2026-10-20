@@ -82,6 +82,11 @@ void ACF_CombatPlayerCharacter::SetupPlayerInputComponent(UInputComponent* Playe
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this,
 		                                   &ACF_CombatPlayerCharacter::Look);
 
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this,
+		                                   &ACF_CombatPlayerCharacter::StartSprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this,
+		                                   &ACF_CombatPlayerCharacter::StopSprint);
+
 		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Started, this,
 		                                   &ACF_CombatPlayerCharacter::TryAttack);
 	}
@@ -143,6 +148,20 @@ void ACF_CombatPlayerCharacter::Look(const FInputActionValue& Value)
 	if (!CombatMovementComponent) return;
 
 	CombatMovementComponent->Look(Value);
+}
+
+void ACF_CombatPlayerCharacter::StartSprint()
+{
+	if (!CombatMovementComponent) return;
+
+	CombatMovementComponent->StartSprint();
+}
+
+void ACF_CombatPlayerCharacter::StopSprint()
+{
+	if (!CombatMovementComponent) return;
+
+	CombatMovementComponent->StopSprint();
 }
 
 void ACF_CombatPlayerCharacter::TryAttack()

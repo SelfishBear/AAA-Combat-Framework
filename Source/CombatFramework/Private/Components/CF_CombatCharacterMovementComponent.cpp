@@ -40,9 +40,22 @@ void UCF_CombatCharacterMovementComponent::Move(const FInputActionValue& Value)
 void UCF_CombatCharacterMovementComponent::Look(const FInputActionValue& Value)
 {
 	FVector2D LookVector = Value.Get<FVector2D>();
-	
-	if (!GetController()) return; 
-	
+
+	if (!GetController()) return;
+
 	GetController()->GetPawn()->AddControllerYawInput(-LookVector.X);
 	GetController()->GetPawn()->AddControllerPitchInput(LookVector.Y);
+}
+
+void UCF_CombatCharacterMovementComponent::StartSprint()
+{
+	if (IsFalling()) return;
+	CurrentMovementState = EMovementState::Sprinting;
+	MaxWalkSpeed = MovementSettings.SprintSpeed;
+}
+
+void UCF_CombatCharacterMovementComponent::StopSprint()
+{
+	CurrentMovementState = EMovementState::Walking;
+	MaxWalkSpeed = MovementSettings.WalkSpeed;
 }

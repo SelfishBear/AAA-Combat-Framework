@@ -46,6 +46,9 @@ public:
 	TObjectPtr<UInputAction> JumpAction;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+	TObjectPtr<UInputAction> SprintAction;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	TObjectPtr<UInputAction> AttackAction;
 	
 	FORCEINLINE UCF_CombatComponent* GetCombatComponent() const { return CombatComponent; }
@@ -68,6 +71,9 @@ private:
 	
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
+	
+	void StartSprint();
+	void StopSprint();
 	
 	void TryAttack();
 };
