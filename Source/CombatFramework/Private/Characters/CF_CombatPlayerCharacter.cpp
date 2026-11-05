@@ -62,6 +62,16 @@ void ACF_CombatPlayerCharacter::BeginPlay()
 	BindMappingContext();
 }
 
+void ACF_CombatPlayerCharacter::Landed(const FHitResult& Hit)
+{
+	Super::Landed(Hit);
+
+	if (CombatComponent)
+	{
+		CombatComponent->HandleOwnerLanded();
+	}
+}
+
 void ACF_CombatPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

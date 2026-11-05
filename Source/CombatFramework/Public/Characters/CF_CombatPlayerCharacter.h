@@ -54,6 +54,7 @@ public:
 	FORCEINLINE UCF_CombatComponent* GetCombatComponent() const { return CombatComponent; }
 
 protected:
+	virtual void Landed(const FHitResult& Hit) override;
 	virtual void PostInitializeComponents() override;
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
