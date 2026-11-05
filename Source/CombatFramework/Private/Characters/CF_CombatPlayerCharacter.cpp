@@ -146,8 +146,6 @@ void ACF_CombatPlayerCharacter::UnbindMappingContext()
 
 void ACF_CombatPlayerCharacter::Move(const FInputActionValue& Value)
 {
-	UE_LOG(LogCombatCharacter, Log, TEXT("Move called with value: %s"), *Value.Get<FVector2D>().ToString());
-
 	if (!CombatMovementComponent) return;
 
 	CombatMovementComponent->Move(Value);

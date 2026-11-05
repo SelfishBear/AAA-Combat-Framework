@@ -40,12 +40,10 @@ private:
 
 	int32 CurrentGroundAttackIndex = 0;
 	int32 CurrentAirAttackIndex = 0;
-	UPROPERTY()
-	TObjectPtr<UAnimMontage> CurrentAirAttackMontage;
 
 	void GetOwnerCharacter();
+	
 	void SubscribeAttackMontageEnded(UAnimMontage* AttackMontage, int32 AttackIndex);
-
 	void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 
 	void PlayAppropriateAttack(const TArray<UAnimMontage*>& AttackMontages, int32& AttackIndex);

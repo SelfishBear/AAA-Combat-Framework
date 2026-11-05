@@ -47,22 +47,15 @@ void UCF_CombatComponent::PlayAppropriateAttack(const TArray<UAnimMontage*>& Att
 	UE_LOG(LogTemp, Warning, TEXT("CurrentAttackIndex: %d"), AttackIndex);
 }
 
-void UCF_CombatComponent::ResetAttackAbility()
-{
-	CurrentGroundAttackIndex = 0;
-	CurrentAirAttackIndex = 0;
-	bCanAttack = true;
-}
-
 void UCF_CombatComponent::HandleOwnerLanded()
 {
 	if (!IsValid(OwnerCharacter)) return;
 
 	if (UAnimInstance* AnimInstance = OwnerCharacter->GetMesh()->GetAnimInstance())
 	{
-		if (AnimInstance->Montage_IsPlaying(CombatDataAsset->AirAttackMontages[CurrentAirAttackIndex]))
+		if (AnimInstance->IsAnyMontagePlaying())
 		{
-			AnimInstance->Montage_Stop(0.15f, CombatDataAsset->AirAttackMontages[CurrentAirAttackIndex]);
+			AnimInstance->Montage_Stop(0.15f, AnimInstance->GetCurrentActiveMontage());
 		}
 	}
 
@@ -98,4 +91,11 @@ void UCF_CombatComponent::GetOwnerCharacter()
 	if (!Character) return;
 
 	OwnerCharacter = Character;
+}
+
+void UCF_CombatComponent::ResetAttackAbility()
+{
+	CurrentGroundAttackIndex = 0;
+	CurrentAirAttackIndex = 0;
+	bCanAttack = true;
 }
